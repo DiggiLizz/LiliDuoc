@@ -1,0 +1,118 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+import java.util.Scanner;
+
+/**
+ *
+ * @author Grupo 9: Lilian Zapata y Vania Maluenda
+ */
+public class Exp2_s4_grupo09 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        //Definicion de las variables
+        double precioBase = 7000, vuelto = 0, descuento = 0, pago = 0;
+        String tipoDescuento = "Sin descuento"; //variable para almacenar el tipo de descuento
+        
+        System.out.println("BIENVENIDOS A TEATRO MORO");
+        System.out.println("LAS MEJORES FUNCIONES DE LA CIUDAD");
+        System.out.println("Valor entrada general $7000");
+        System.out.println("Contamos con descuentos estudiantes y Adulto Mayor");
+     
+        System.out.println("  _____Escenario_____");
+        System.out.println("     A    B     C");
+        System.out.println("   XXXX  XXXX  XXXX");
+        System.out.println("   XXXX  XXXX  XXXX");
+        System.out.println("   XXXX  XXXX  XXXX");
+        System.out.println("   XXXX  XXXX  XXXX");
+        System.out.println("   XXXX  XXXX  XXXX");
+        
+        System.out.println("Desea comprar entradas para la funcion de hoy?");
+        System.out.println("Ingrese 1 para SI, 2 para NO");
+        int respuesta = scanner.nextInt();
+        
+        for (;;){
+            
+ 
+            switch (respuesta){
+                case 1 -> {
+                    
+                    System.out.println("Seleccione la Zona del Teatro (A, B o C)");
+                    String zonaSeleccionada = scanner.nextLine();
+                    zonaSeleccionada = scanner.nextLine();
+                    
+                    //validar la zona seleccionada
+                    if (!zonaSeleccionada.equals("a") && !zonaSeleccionada.equals("b") && !zonaSeleccionada.equals("c")){
+                        System.out.println("Ingrese Zona Valida. A, B o C");
+                        System.out.println("Encaso de volver a ingresar opcion no valida, se cerrara la venta");
+                        zonaSeleccionada = scanner.nextLine();
+                        return;
+                    }
+                    
+                    
+                    //Ingreso de la edad y descuento segun corresponda
+                    System.out.println("Ingrese su edad para ver si tiene descuento");
+                    int edad = scanner.nextInt();
+                    if (edad <0){
+                        System.out.println("Ingrese una edad valida");
+                    }else if (edad <=25){
+                        descuento = 0.10; // descuento del 10% para estudiantes, considerados menores a 25 años
+                        tipoDescuento = "Descuento Estudiante";
+                    }else if (edad >= 65){
+                        descuento = 0.15; // descuento del 15% para adulto mayor
+                        tipoDescuento = "Descuento tercera edad";
+                    }
+                    
+                    //Proceso de pago
+                    double precioFinal = precioBase - (precioBase * descuento);
+                    System.out.println("El total a pagar es: $ " + precioFinal);
+                    System.out.println("Ingrese su pago");
+                    pago = scanner.nextInt();
+                    while (pago < precioFinal){
+                        System.out.println("El pago debe ser mayor o igual al Total a pagar");
+                        System.out.println("Reingrese su pago");
+                        pago = scanner.nextInt();
+                    }
+                    
+                    //vuelto
+                    vuelto = pago - precioFinal;
+                    System.out.println("Su vuelto es: $ " + vuelto);
+                    
+                    //Ticket de compra
+                    System.out.println("--------TICKET PAGO--------");
+                    System.out.println("Zona seleccionada: " + zonaSeleccionada);
+                    System.out.println("Precio base: $ 7000");
+                    System.out.println("Descuento aplicado: " + tipoDescuento);
+                    System.out.println("Precio Final: $ " + precioFinal);
+                    System.out.println("Su vuelto es: $ " + vuelto);
+                    System.out.println("---------------------------");
+                    
+                    System.out.println("Desea comprar otra entrada");
+                    System.out.println("Ingrese 1 para SI, 2 para NO");
+                    respuesta = scanner.nextInt();
+                    if (respuesta ==2){
+                        System.out.println("Gracias por visitarnos");
+                        System.out.println("Disfrute su funcion");
+                    }
+                    
+                }
+
+                case 2 -> {
+                    System.out.println("Gracias por visitarnos");
+                    System.out.println("Lo esperamos en la proxima funcion");
+                    return;
+                }
+            }
+            
+        }
+        
+    }
+    
+}
+
