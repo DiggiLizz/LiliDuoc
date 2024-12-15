@@ -1,0 +1,19 @@
+numeroRuedas;color;numeroPuertas;marca;modelo;patente;tipoauto;numeroAsientos;capacidadCarga ton;costofijo;costo variable
+4;blanco;3;susuki;spaceTourer;AHUJ34;pasajeros;10;0;0;0
+4;blanco;4;mazda;Transit bus;SKIJ89;pasajeros;10;0;0;0
+4;gris;4;renault;ft-crew;OKLP00;pasajeros;15;0;0;0
+4;blanco;3;changan;k1;OJAS12;pasajeros;10;0;0;0
+4;crema;4;chevrolet;staria;OHVB34;pasajeros;30;0;0;0
+4;lila;4;toyota;daily minibus;MVJI78;pasajeros;40;0;0;0
+4;verde;3;mitsubishi;refine;BNBB00;pasajeros;36;0;0;0
+4;blanci;4;nissan;sunray;AXOL53;pasajeros;15;0;0;0
+4;blanco;3;susuki;touring;PILI89;pasajeros;8;0;0;0
+4;blanco;3;toyota;2d;POLI90;carga;2;10;1000;34
+6;gris;3;peugeot;2da;LIZZ20;carga;2;7;1000;45
+6;crema;3;citroen;2db;AXEL65;carga;2;10;2000;76
+6;rojo;4;chevrolet;3a;LUZZ19;carga;2;50;6000;78
+8;verde;4;toyota;4c;ADIE34;carga;2;40;50000;4564
+8;café;4;toyota;40a;URIE56;carga;2;16;800;33
+6;blanco;2;hyundai;v2db;COMO56;carga;2;30;900;67
+6;blanco;2;audi;v3a;VIVI72;carga;2;5;100;242
+6;blanco;2;toyota;vzs;LOSS56;carga;2;17;1500;2344
